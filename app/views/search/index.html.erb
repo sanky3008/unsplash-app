@@ -1,0 +1,9 @@
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% if @show_photo %>
+    <img src=<%= @results.sample["urls"]["full"]%> height="500" width="500">
+<% end %>
